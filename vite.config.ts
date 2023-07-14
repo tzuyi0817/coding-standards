@@ -1,8 +1,14 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { resolve } from 'path';
+import { fileURLToPath, URL } from 'node:url';
+import { version as pkgVersion } from './package.json';
 
-// https://vitejs.dev/config/
+process.env.VITE_APP_VERSION = pkgVersion;
+
+if (process.env.NODE_ENV === 'production') {
+  process.env.VITE_APP_BUILD_EPOCH = new Date().getTime().toString();
+}
+
 export default defineConfig({
   base: './',
   plugins: [
@@ -10,7 +16,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-    }
-  }
-})
+      '@': fileURLToPath(new URL('src', import.meta.url)),
+    },
+  },
+});
