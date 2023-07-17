@@ -16,8 +16,8 @@ module.exports = {
     // },
     extend: {
       colors: {
-        primary: '#444856',
-        secondary: '#444857',
+        primary: '',
+        secondary: '',
       },
       backgroundImage: {},
       animation: {},

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
+import eslint from 'vite-plugin-eslint';
 import { version as pkgVersion } from './package.json';
 
 process.env.VITE_APP_VERSION = pkgVersion;
@@ -13,6 +14,7 @@ export default defineConfig({
   base: './',
   plugins: [
     vue(),
+    eslint(),
   ],
   resolve: {
     alias: {

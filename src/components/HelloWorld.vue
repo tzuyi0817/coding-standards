@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { useConfigStore } from '@/stores';
 
-defineProps<{ msg: string }>()
+const { version } = useConfigStore();
 
-const count = ref(0)
+defineProps<{ msg: string }>();
+
+const count = ref(0);
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
-  <div class="card">
+  <div class="p-8">
     <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
   </div>
 
   <p>
@@ -29,10 +28,11 @@ const count = ref(0)
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <p class="read-the-docs">{{ version }}</p>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 .read-the-docs {
-  color: #888;
+  @apply text-[#888];
 }
 </style>

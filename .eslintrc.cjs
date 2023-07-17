@@ -5,9 +5,11 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    browser: true,
+    es6: true,
   },
   extends: [
-    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting',
     'plugin:security/recommended',
@@ -20,6 +22,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'comma-dangle': ['error', 'only-multiline'],
+    quotes: ['error', 'single'],
     semi: ['error', 'always'],
   },
   globals: {
