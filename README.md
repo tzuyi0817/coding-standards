@@ -2,25 +2,20 @@
 
 ## Features
 
-- Vue 3.3.4
-- pnpm 8.6.5
-- Vite 4.4.0
+- Vue 3.3
+- pnpm 8.6
+- Vite 4.4
 - **Fully typed** [pinia](https://pinia.vuejs.org/) store
   - [pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate)
 - Routing using [vue-router 4](https://router.vuejs.org/)
 - TypeScript 5.0
-- axios 1.4.0
-- Tailwind CSS 3 w/ following plugins preinstalled:
-  <!-- - `@tailwindcss/aspect-ratio`
-  - `@tailwindcss/line-clamp`
-  - `@tailwindcss/typography`
-  - `@tailwindcss/forms`
-  - `firefox`-variant -->
+- axios 1.4
+- Tailwind CSS 3
 - PostCSS 8 w/ `postcss-nesting` plugin
+- [cssnano](https://cssnano.co/) for minimizing production CSS
 - Eslint
 - Prettier
 - Alias `@` to `<project_root>/src`
-- [cssnano](https://cssnano.co/) for minimizing production CSS
 - mock use [msw](https://mswjs.io/)
   - `npx msw init ./public`
 - unit test use [jest](https://jestjs.io/)
@@ -42,3 +37,42 @@
 - GitLab CI
   - Automated e2e tests
   - Automated component tests  -->
+
+## Project Files
+
+```text
+src/
+├── __tests__/
+│   ├── __mocks__
+│   │   └── server.ts
+│   ├── e2e/*
+│   └── unit/*
+├── apis/*
+├── assets/*
+│   └── images/*
+├── components/
+│   ├── common/*
+│   └── indexPage/
+│       └── HelloWorld.vue
+├── config/*
+├── hooks/*
+├── pages/
+│   └── IndexPage.tsx
+├── router/
+│   └── index.ts
+├── store/
+│   ├── modules
+│   │   └── config.ts
+│   └── index.ts
+├── styles/
+│   ├── common/
+|   │   ├── all.postcss
+|   │   └── button.postcss
+│   ├── index.postcss
+│   └── tailwind.postcss
+├── types/*
+├── utils/*
+├── App.vue
+├── vite-env.d.ts
+└── main.ts
+```
