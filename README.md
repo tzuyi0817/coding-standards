@@ -13,6 +13,7 @@
 - Tailwind CSS 3
 - PostCSS 8 w/ `postcss-nesting` plugin
 - [cssnano](https://cssnano.co/) for minimizing production CSS
+- [postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem) generates rem units from pixel units
 - Eslint
 - Prettier
 - Alias `@` to `<project_root>/src`
@@ -43,7 +44,7 @@
 ```text
 src/
 ├── __tests__/
-│   ├── __mocks__
+│   ├── __mocks__/
 │   │   └── server.ts
 │   ├── e2e/*
 │   └── unit/*

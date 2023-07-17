@@ -97,6 +97,9 @@ devDependencies:
   postcss-nesting:
     specifier: ^12.0.0
     version: 12.0.0(postcss@8.4.25)
+  postcss-pxtorem:
+    specifier: ^6.0.0
+    version: 6.0.0(postcss@8.4.25)
   tailwindcss:
     specifier: ^3.3.2
     version: 3.3.2
@@ -5834,6 +5837,14 @@ packages:
       cssnano-utils: 4.0.0(postcss@8.4.25)
       postcss: 8.4.25
       postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-pxtorem@6.0.0(postcss@8.4.25):
+    resolution: {integrity: sha512-ZRXrD7MLLjLk2RNGV6UA4f5Y7gy+a/j1EqjAfp9NdcNYVjUMvg5HTYduTjSkKBkRkfqbg/iKrjMO70V4g1LZeg==}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.25
     dev: true
 
   /postcss-reduce-initial@6.0.0(postcss@8.4.25):

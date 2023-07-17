@@ -11,7 +11,7 @@ import HelloWorld from '@/components/indexPage/HelloWorld.vue';
       <img src="@/assets/vue.svg" class="logo hover:drop-shadow-[0_0_2em_#42b883aa]" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <hello-world msg="Vite + Vue" />
 </template>
 
 <style lang="postcss" scoped>
