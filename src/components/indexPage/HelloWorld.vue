@@ -10,7 +10,7 @@ const { version } = useConfigStore();
 const count = ref(0);
 
 function changeLocale() {
-  locale.value = locale.value === 'zh-CN' ? 'en-US' : 'zh-CN';
+  locale.value = locale.value === 'en-US' ? 'zh-CN' : 'en-US';
 }
 </script>
 

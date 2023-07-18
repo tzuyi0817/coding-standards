@@ -1,6 +1,8 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
+import 'virtual:svg-icons-register';
+
 import '@/styles/tailwind.postcss';
 import '@/styles/index.postcss';
 import App from './App.vue';

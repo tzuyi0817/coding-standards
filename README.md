@@ -3,24 +3,26 @@
 ## Features
 
 - Vue 3.3
-- pnpm 8.6
+- Pnpm 8.6
 - Vite 4.4
 - [pinia](https://pinia.vuejs.org/) store
   - [pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate)
 - Routing using [vue-router 4](https://router.vuejs.org/)
 - TypeScript 5.0
-- axios 1.4
+- Axios 1.4
 - Tailwind CSS 3
 - Vue-i18n 9
 - PostCSS 8 w/ `postcss-nesting` plugin
 - [cssnano](https://cssnano.co/) for minimizing production CSS
 - [postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem) generates rem units from pixel units
+- [vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) generate svg sprite map
+- [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) auto importing for common components
 - Eslint
 - Prettier
 - Alias `@` to `<project_root>/src`
-- mock use [msw](https://mswjs.io/)
+- Mock use [msw](https://mswjs.io/)
   - `npx msw init ./public`
-- unit test use [jest](https://jestjs.io/)
+- Unit test use [jest](https://jestjs.io/)
   - [ts-jest](https://www.npmjs.com/package/ts-jest)
   - [babel-jest](https://www.npmjs.com/package/babel-jest)
   - [jest-environment-jsdom](https://www.npmjs.com/package/jest-environment-jsdom)
@@ -51,13 +53,19 @@ src/
 │   └── unit/*
 ├── apis/*
 ├── assets/*
-│   └── images/*
+│   └── images/
+│       └── svgIcons
+│          └── vue.svg
 ├── components/
-│   ├── common/*
+│   ├── common/
+│   │   └── SvgIcon.vue
 │   └── indexPage/
 │       └── HelloWorld.vue
 ├── configs/*
 ├── hooks/*
+├── locales/
+│   ├── en-US.json
+│   └── zh-CN.json
 ├── mocks/
 │   ├── handlers/*
 │   │   ├── apis/*
@@ -65,6 +73,8 @@ src/
 │   └── browser.ts
 ├── pages/
 │   └── IndexPage.tsx
+├── plugins/
+│   └── i18n.ts
 ├── router/
 │   └── index.ts
 ├── store/
