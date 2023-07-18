@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useConfigStore } from '@/stores';
-
-const { version } = useConfigStore();
 
 defineProps<{ msg: string }>();
 
+const { locale } = useI18n();
+const { version } = useConfigStore();
 const count = ref(0);
+
+function changeLocale() {
+  locale.value = locale.value === 'zh-CN' ? 'en-US' : 'zh-CN';
+}
 </script>
 
 <template>
@@ -29,6 +34,7 @@ const count = ref(0);
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
   <p class="read-the-docs">{{ version }}</p>
+  <button @click="changeLocale">{{ $t('language') }}</button>
 </template>
 
 <style lang="postcss" scoped>
