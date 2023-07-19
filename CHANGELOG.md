@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0 (2023-07-19)
+
+
+### Bug Fixes
+
+* ci release-please ([6e2d8ed](https://github.com/tzuyi0817/coding-standards/commit/6e2d8edd8301d750d2401185c511f05d83c1e3b9))
+* ci release-please ([1d57174](https://github.com/tzuyi0817/coding-standards/commit/1d57174bf5e31fab02c4758a643e78b2cea96ce7))
+* ci release-please ([113d722](https://github.com/tzuyi0817/coding-standards/commit/113d72230e2bd9d0114a4db734a632cdbe794606))
+
 ## 1.0.0 (2023-07-18)
 
 
