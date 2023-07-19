@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore --fix .",
-    "test:unit": "jest --coverage"
+    "lint:staged": "lint-staged",
+    "test:unit": "jest --coverage",
+    "prepare": "husky install",
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -39,8 +41,10 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-security": "^1.7.1",
     "eslint-plugin-vue": "^9.15.1",
+    "husky": "^8.0.3",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
+    "lint-staged": "^13.2.3",
     "msw": "^1.2.2",
     "postcss": "^8.4.25",
     "postcss-import": "^15.1.0",
@@ -51,7 +55,6 @@
     "typescript": "^5.0.2",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.0",
-    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue-tsc": "^1.8.3"
   },
@@ -63,7 +66,14 @@
   "msw": {
     "workerDirectory": "public"
   },
-  "pre-commit": [
-    "lint"
-  ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": [
+      "pnpm lint"
+    ]
+  }
 }

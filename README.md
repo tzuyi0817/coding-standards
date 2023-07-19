@@ -19,6 +19,8 @@
 - [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) auto importing for common components
 - Eslint
 - Prettier
+- [Husky](https://www.npmjs.com/package/husky) to improves commits
+  - if encounter npm: command not found, can execute `ln -s $(which npm) /usr/local/bin/npm` in zsh
 - Alias `@` to `<project_root>/src`
 - Mock use [msw](https://mswjs.io/)
   - `npx msw init ./public`

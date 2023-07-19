@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 import { dirname, resolve } from 'node:path';
-import eslint from 'vite-plugin-eslint';
 import Components from 'unplugin-vue-components/vite';
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
@@ -18,7 +17,6 @@ export default defineConfig({
   base: './',
   plugins: [
     vue(),
-    eslint(),
     Components({
       dirs: ['src/components/common'],
       dts: 'src/components.d.ts',
