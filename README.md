@@ -2,21 +2,21 @@
 
 ## Features
 
-- Vue 3.3
-- Pnpm 8.6
-- Vite 4.4
-- [pinia](https://pinia.vuejs.org/) store
+- Vue 3
+- Pnpm 8
+- Vite 4
+- [Pinia](https://pinia.vuejs.org/) store
   - [pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate)
 - Routing using [vue-router 4](https://router.vuejs.org/)
-- TypeScript 5.0
-- Axios 1.4
+- TypeScript 5
+- Axios
 - Tailwind CSS 3
 - Vue-i18n 9
 - PostCSS 8 w/ `postcss-nesting` plugin
-- [cssnano](https://cssnano.co/) for minimizing production CSS
-- [postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem) generates rem units from pixel units
-- [vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) generate svg sprite map
-- [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) auto importing for common components
+- [Cssnano](https://cssnano.co/) for minimizing production CSS
+- [Postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem) generates rem units from pixel units
+- [Vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) generate svg sprite map
+- [Unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) auto importing for common components
 - Eslint
 - Prettier
 - [Husky](https://www.npmjs.com/package/husky) to improves commits
