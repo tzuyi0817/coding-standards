@@ -1,0 +1,40 @@
+.popup {
+  @apply 
+  fixed
+  top-0
+  left-0
+  flex
+  flex-col
+  items-center
+  justify-center
+  z-10
+  animate-popup
+  drop-shadow-lg
+  w-full
+  h-full;
+  &_header {
+    @apply
+    flex
+    w-[90%]
+    max-w-lg
+    justify-between
+    items-center
+    text-white
+    bg-primary
+    p-3
+    rounded-t-md;
+  }
+  &_content {
+    @apply
+    px-4
+    pb-4
+    w-[90%]
+    max-w-lg
+    max-h-[60vh]
+    rounded-b-md
+    bg-white;
+    button {
+      @apply text-white bg-secondary p-3 transition-all hover:brightness-125;
+    }
+  }
+}
