@@ -1,12 +1,5 @@
 # Changelog
 
-## 1.0.1 (2023-07-20)
-
-
-### Bug Fixes
-
-* adjustment postcss.config and tsconfig ([549320b](https://github.com/tzuyi0817/coding-standards/commit/549320beade84bf3a0ebe371cab84278ff2f3396))
-
 ## 1.0.0 (2023-07-18)
 
 
@@ -19,3 +12,8 @@
 * update README.md ([7f0fb1e](https://github.com/tzuyi0817/coding-standards/commit/7f0fb1e89d1ecf08073a6711de415d0b2bbeea2a))
 * vite-plugin-svg-icons and unplugin-vue-components ([3ffce3f](https://github.com/tzuyi0817/coding-standards/commit/3ffce3f6585116937a93b6a5b809f1e0d9abf8b7))
 * vue-i18n ([76e2064](https://github.com/tzuyi0817/coding-standards/commit/76e206486033d99834105dc8220ba3dedcf9fbce))
+
+
+### Bug Fixes
+
+* adjustment postcss.config and tsconfig ([549320b](https://github.com/tzuyi0817/coding-standards/commit/549320beade84bf3a0ebe371cab84278ff2f3396))
