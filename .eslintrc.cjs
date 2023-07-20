@@ -40,6 +40,18 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_' }],
   },
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/vue'],
+      rules: {
+        'testing-library/await-async-query': 'error',
+        'testing-library/no-await-sync-query': 'error',
+        'testing-library/no-debugging-utils': 'warn',
+        'testing-library/no-dom-import': 'off',
+      },
+    },
+  ],
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',

@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 import { dirname, resolve } from 'node:path';
@@ -33,4 +33,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('src', import.meta.url)),
     },
   },
-});
+}) as UserConfig;

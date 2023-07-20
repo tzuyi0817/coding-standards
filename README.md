@@ -24,10 +24,9 @@
 - Alias `@` to `<project_root>/src`
 - Mock use [msw](https://mswjs.io/)
   - `npx msw init ./public`
-- Unit test use [jest](https://jestjs.io/)
-  - [ts-jest](https://www.npmjs.com/package/ts-jest)
-  - [babel-jest](https://www.npmjs.com/package/babel-jest)
-  - [jest-environment-jsdom](https://www.npmjs.com/package/jest-environment-jsdom)
+- Unit test use [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/)
+  - [jsdom](https://www.npmjs.com/package/jsdom)
+  - [@vitest/coverage-v8](https://vitest.dev/guide/coverage.html)
   - [@testing-library/jest-dom](https://testing-library.com/docs/ecosystem-jest-dom/)
   - [@testing-library/vue](https://testing-library.com/docs/vue-testing-library/intro/)
   - [@testing-library/user-event](https://testing-library.com/docs/ecosystem-user-event/)
@@ -50,7 +49,8 @@
 src/
 ├── __tests__/
 │   ├── __mocks__/
-│   │   └── server.ts
+│   ├── setup/
+│   │   └── unitTest.ts
 │   ├── e2e/*
 │   └── unit/*
 ├── apis/*
@@ -72,7 +72,8 @@ src/
 │   ├── handlers/*
 │   │   ├── apis/*
 │   │   └── index.ts
-│   └── browser.ts
+│   │── browser.ts
+│   └── server.ts
 ├── pages/
 │   └── IndexPage.tsx
 ├── plugins/
