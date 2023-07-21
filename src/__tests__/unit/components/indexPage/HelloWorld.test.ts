@@ -1,8 +1,9 @@
+import { nextTick } from 'vue';
 import { screen } from '@testing-library/vue';
 import userEvent from '@testing-library/user-event';
 import HelloWorld from '@/components/indexPage/HelloWorld.vue';
 import { renderComponent } from '@/__tests__/unit/render';
-import { useConfigStore } from '@/stores';
+import { useConfigStore, useUserStore } from '@/stores';
 import i18n from '@/plugins/i18n';
 
 describe('HelloWorld component', () => {
@@ -22,6 +23,7 @@ describe('HelloWorld component', () => {
     expect(screen.getByText(/click on the vite and vue logos to learn more/i)).toBeInTheDocument();
     expect(screen.getByText(version)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: t('language') })).toBeInTheDocument();
+    expect(screen.getByRole('button', {  name: t('login') })).toBeInTheDocument();
   });
 
   it('count button interact', async () => {
@@ -49,9 +51,30 @@ describe('HelloWorld component', () => {
   it('locale change interact', async () => {
     renderComponent(HelloWorld, { props: { msg: '' } });
     const localeButton = screen.getByRole('button', { name: t('language') });
+    const loginButton = screen.getByRole('button', { name: t('login') });
 
     expect(localeButton).toHaveTextContent('English');
+    expect(loginButton).toHaveTextContent('login');
     await userEvent.click(localeButton);
     expect(localeButton).toHaveTextContent('中文');
+    expect(loginButton).toHaveTextContent('登入');
+  });
+
+  it('open login popup', async () => {
+    renderComponent(HelloWorld, { props: { msg: '' }});
+    await userEvent.click(screen.getByRole('button', { name: t('login') }));
+    expect(await screen.findByRole('heading', { name: /login!/i })).toBeInTheDocument();
+  });
+
+  it('test logout', async () => {
+    const userStore = useUserStore();
+
+    renderComponent(HelloWorld, { props: { msg: '' }});
+    userStore.setUser({ account: 'root' });
+    expect(userStore.isLogin).toBeTruthy();
+    await nextTick();
+    await userEvent.click(screen.getByRole('button', { name: t('logout') }));
+    expect(userStore.isLogin).toBeFalsy();
+    expect(screen.getByRole('button', { name: t('login') })).toBeInTheDocument();
   });
 });
