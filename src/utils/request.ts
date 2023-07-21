@@ -1,8 +1,7 @@
 import axios from 'axios';
-import { useUserStore } from '@/stores';
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: import.meta.env.MODE === 'test' ? 'http://localhost:3000'  : import.meta.env.VITE_API_URL,
 });
 
 axiosInstance.interceptors.request.use(
@@ -20,12 +19,6 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   response => response.data,
   error => {
-    const { data } = error.response;
-
-    if (data === 'Unauthorized') {
-      useUserStore().setUser({});
-      localStorage.removeItem('coding_standards_token');
-    }
     return Promise.reject(error);
   }
 );
