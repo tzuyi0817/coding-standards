@@ -34,15 +34,13 @@
 - Predefined and fully typed global variables:
   - `VITE_APP_VERSION` is read from `package.json` version at build time
   - `VITE_APP_BUILD_EPOCH` is populated as `new Date().getTime()` at build time
-<!-- - Cypress.io e2e tests (configured similarly to `vue-cli`)
-- Cypress.io component tests
 - GitHub workflows
-  - Dependabot
+  - release please action
+  - Automated unit tests
   - Automated e2e tests
-  - Automated component tests
-- GitLab CI
+<!-- - GitLab CI
   - Automated e2e tests
-  - Automated component tests  -->
+  - Automated component tests -->
 
 ## Project Files
 
@@ -81,7 +79,7 @@ src/
 │   └── i18n.ts
 ├── router/
 │   └── index.ts
-├── store/
+├── stores/
 │   ├── modules
 │   │   └── config.ts
 │   └── index.ts

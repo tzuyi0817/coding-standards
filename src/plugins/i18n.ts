@@ -1,13 +1,13 @@
 import { createI18n } from 'vue-i18n';
 import enUS from '@/locales/en-US.json';
-import zhCN from '@/locales/zh-CN.json';
+import zhTW from '@/locales/zh-TW.json';
 
 const i18n = createI18n({
   legacy: import.meta.env.MODE === 'test',
   locale: navigator.language,
   fallbackLocale: 'en-US',
   messages: {
-    'zh-CN': zhCN,
+    'zh-TW': zhTW,
     'en-US': enUS,
   },
 });

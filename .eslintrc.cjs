@@ -51,6 +51,10 @@ module.exports = {
         'testing-library/no-dom-import': 'off',
       },
     },
+    {
+      files: ['**/__tests__/e2e/**/*.spec.[jt]s?(x)'],
+      extends: ['plugin:playwright/recommended'],
+    },
   ],
   globals: {
     defineProps: 'readonly',
