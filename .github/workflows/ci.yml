@@ -50,3 +50,6 @@ jobs:
 
       - name: Run unit test
         run: pnpm test:unit
+
+      - name: Run e2e test
+        run: pnpm test:ci-e2e

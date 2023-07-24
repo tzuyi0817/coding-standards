@@ -30,6 +30,7 @@
   - [@testing-library/jest-dom](https://testing-library.com/docs/ecosystem-jest-dom/)
   - [@testing-library/vue](https://testing-library.com/docs/vue-testing-library/intro/)
   - [@testing-library/user-event](https://testing-library.com/docs/ecosystem-user-event/)
+- E2E test use [playwright](https://playwright.dev/)
 - Predefined and fully typed global variables:
   - `VITE_APP_VERSION` is read from `package.json` version at build time
   - `VITE_APP_BUILD_EPOCH` is populated as `new Date().getTime()` at build time

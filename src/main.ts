@@ -9,11 +9,11 @@ import App from './App.vue';
 import router from '@/router';
 import i18NPlugin from '@/plugins/i18n';
 
-// if (process.env.NODE_ENV === 'development') {
-//   const { worker } = await import('@/mocks/browser');
+if (process.env.NODE_ENV === 'mockServiceWorker') {
+  const { worker } = await import('@/mocks/browser');
 
-//   worker.start();
-// }
+  worker.start();
+}
 
 const pinia = createPinia();
 const app = createApp(App);
