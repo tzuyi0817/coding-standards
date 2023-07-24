@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/tzuyi0817/coding-standards/compare/v1.1.0...v1.1.1) (2023-07-24)
+
+
+### Bug Fixes
+
+* ci  install playwright browsers ([cb02599](https://github.com/tzuyi0817/coding-standards/commit/cb0259948692edd33120e303b8001da6e79e0783))
+
 ## [1.1.0](https://github.com/tzuyi0817/coding-standards/compare/v1.0.0...v1.1.0) (2023-07-24)
 
 
