@@ -48,6 +48,9 @@ jobs:
         if: steps.dependencies-cache.outputs.cache-hit != 'true'
         run: pnpm install
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
       - name: Run unit test
         run: pnpm test:unit
 
