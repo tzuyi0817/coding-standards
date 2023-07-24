@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/tzuyi0817/coding-standards/compare/v1.0.0...v1.1.0) (2023-07-24)
+
+
+### Features
+
+* e2e test ([6c13f25](https://github.com/tzuyi0817/coding-standards/commit/6c13f2542cb123c2e07a209ffc88b3cb63cd5ba1))
+
 ## 1.0.0 (2023-07-18)
 
 
