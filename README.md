@@ -74,7 +74,7 @@ src/
 │   │── browser.ts
 │   └── server.ts
 ├── pages/
-│   └── IndexPage.tsx
+│   └── IndexPage.vue
 ├── plugins/
 │   └── i18n.ts
 ├── router/
