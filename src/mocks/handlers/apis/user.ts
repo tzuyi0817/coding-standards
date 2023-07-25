@@ -1,8 +1,9 @@
 import { rest, type MockedRequest } from 'msw';
+import { baseURL } from '@/utils/request';
 import type { LoginPayload } from '@/types/user';
 
 const mockUserApi = {
-  loginUser: rest.post('/login', (req: MockedRequest<LoginPayload>, res, ctx) => {
+  loginUser: rest.post(`${baseURL}/login`, (req: MockedRequest<LoginPayload>, res, ctx) => {
     const { account, password } = req.body;
     const isAuthenticated = account === 'root' && password === '123456789';
 
@@ -25,7 +26,7 @@ const mockUserApi = {
       }),
     );
   }),
-  logoutUser: rest.post('/logout', (_req, res, ctx) => {
+  logoutUser: rest.post(`${baseURL}/logout`, (_req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({

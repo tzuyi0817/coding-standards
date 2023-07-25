@@ -70,7 +70,7 @@ describe('HelloWorld component', () => {
     const userStore = useUserStore();
 
     renderComponent(HelloWorld, { props: { msg: '' }});
-    userStore.setUser({ account: 'root' });
+    await userStore.login({ account: 'root', password: '123456789' });
     expect(userStore.isLogin).toBeTruthy();
     await nextTick();
     await userEvent.click(screen.getByRole('button', { name: t('logout') }));

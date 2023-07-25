@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useUserStore } from '@/stores';
-import { loginUser } from '@/apis/user';
 
 const emit = defineEmits(['update:isShowLoginPop']);
 const localAccount = localStorage.getItem('coding_standards_account');
@@ -10,20 +9,15 @@ const password = ref('');
 const isLoading = ref(false);
 
 async function login() {
-  const data = {
+  const user = {
     account: account.value,
     password: password.value,
   };
 
   isLoading.value = true;
-  try {
-    const { resultMap } = await loginUser(data);
-    const { token, user } = resultMap;
-    const { setUser } = useUserStore();
 
-    setUser(user);
-    localStorage.setItem('coding_standards_token', token);
-    localStorage.setItem('coding_standards_account', account.value);
+  try {
+    await useUserStore().login(user);
     closePopup();
   } catch {
     cleanForm();

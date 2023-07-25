@@ -3,7 +3,6 @@ import { ref, defineAsyncComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
 import { useConfigStore, useUserStore } from '@/stores';
-import { logoutUser } from '@/apis/user';
 
 defineProps<{ msg: string }>();
 
@@ -26,11 +25,7 @@ function toggleLoginPopup() {
 async function logout() {
   isLoading.value = true;
   try {
-    await logoutUser();
-    const { setUser } = useUserStore();
-
-    setUser({});
-    localStorage.removeItem('coding_standards_token');
+    useUserStore().logout();
   } finally {
     isLoading.value = false;
   }

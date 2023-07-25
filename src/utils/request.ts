@@ -1,8 +1,10 @@
 import axios from 'axios';
 
-const axiosInstance = axios.create({
-  baseURL: import.meta.env.MODE === 'test' ? 'http://localhost:3000'  : import.meta.env.VITE_API_URL,
-});
+export const baseURL = import.meta.env.MODE === 'test'
+  ? 'http://localhost:3000'
+  : import.meta.env.VITE_API_URL;
+
+const axiosInstance = axios.create({ baseURL });
 
 axiosInstance.interceptors.request.use(
   (config) => {
