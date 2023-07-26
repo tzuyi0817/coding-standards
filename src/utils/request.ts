@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const baseURL = import.meta.env.MODE === 'test'
-  ? 'http://localhost:3000'
+export const baseURL = process.env.NODE_ENV === 'mockServiceWorker'
+  ? ''
   : import.meta.env.VITE_API_URL;
 
 const axiosInstance = axios.create({ baseURL });

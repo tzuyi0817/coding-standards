@@ -17,7 +17,7 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: process.env.CI ? 'MOCK=true vite preview --port 5173' : 'pnpm dev:mock',
+    command: 'pnpm dev:mock',
     port: 5173,
     reuseExistingServer: !process.env.CI,
   },
