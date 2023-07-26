@@ -36,7 +36,9 @@ test('click Volar link open language-tools github blank tab', async ({ page, con
   await page.getByRole('link', { name: 'Volar' }).click();
   const newPage = await context.waitForEvent('page');
   await newPage.waitForLoadState();
-  await expect(newPage).toHaveTitle('GitHub - vuejs/language-tools: ⚡ High-performance Vue language tooling based-on Volar.js');
+  await expect(newPage).toHaveTitle(
+    'GitHub - vuejs/language-tools: ⚡ High-performance Vue language tooling based-on Volar.js'
+  );
 });
 
 test('locale change interact', async ({ page }) => {
@@ -57,20 +59,4 @@ test('login and logout test', async ({ page }) => {
   await expect(page.getByRole('button', { name: 'logout' })).toBeVisible();
   await page.getByRole('button', { name: 'logout' }).click();
   await expect(page.getByRole('button', { name: 'login' })).toBeVisible();
-});
-
-test('click create-vue link open Vue quick start blank tab', async ({ page, context }) => {
-  await page.getByRole('link', { name: 'create-vue' }).click();
-  const newPage = await context.waitForEvent('page');
-  await newPage.waitForLoadState();
-  await expect(newPage).toHaveTitle('Quick Start | Vue.js');
-});
-
-test('click Volar link open language-tools github blank tab', async ({ page, context }) => {
-  await page.getByRole('link', { name: 'Volar' }).click();
-  const newPage = await context.waitForEvent('page');
-  await newPage.waitForLoadState();
-  await expect(newPage).toHaveTitle(
-    'GitHub - vuejs/language-tools: ⚡ High-performance Vue language tooling based-on Volar.js'
-  );
 });
