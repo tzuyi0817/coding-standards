@@ -5,17 +5,18 @@ import i18n from '@/plugins/i18n';
 
 interface RenderComponentOptions {
   props?: Record<string, any>;
+  provide?: Record<any, any>;
 }
 
 const pinia = createPinia();
 
 setActivePinia(pinia);
 
-export function renderComponent(TestComponent: Component, options?: RenderComponentOptions) {
-  const { props } = options ?? {};
+export function renderComponent(testComponent: Component, options?: RenderComponentOptions) {
+  const componentOptions = options ?? {};
 
-  return render(TestComponent, {
-    props,
+  return render(testComponent, {
+    ...componentOptions,
     global: {
       plugins: [pinia, i18n],
     },
