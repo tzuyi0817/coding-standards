@@ -1,10 +1,10 @@
 import type { Component } from 'vue';
 import { render } from '@testing-library/vue';
+import type { RenderOptions } from '@testing-library/vue/types';
 import { setActivePinia, createPinia } from 'pinia';
 import i18n from '@/plugins/i18n';
 
-interface RenderComponentOptions {
-  props?: Record<string, any>;
+interface RenderComponentOptions extends RenderOptions {
   provide?: Record<any, any>;
 }
 
