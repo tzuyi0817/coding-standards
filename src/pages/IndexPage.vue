@@ -4,11 +4,24 @@ import HelloWorld from '@/components/indexPage/HelloWorld.vue';
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    <a
+      href="https://vitejs.dev"
+      target="_blank"
+    >
+      <img
+        src="/vite.svg"
+        class="logo"
+        alt="Vite logo"
+      />
     </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <svg-icon name="vue" class="logo hover:drop-shadow-[0_0_2em_#42b883aa]" />
+    <a
+      href="https://vuejs.org/"
+      target="_blank"
+    >
+      <svg-icon
+        name="vue"
+        class="logo hover:drop-shadow-[0_0_2em_#42b883aa]"
+      />
     </a>
   </div>
   <hello-world msg="Vite + Vue" />
