@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 .env
-coverage
 
 # Editor directories and files
 .vscode/*
@@ -25,6 +24,12 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# Component auto import
+/src/components.d.ts
+
+# Test reports
+coverage
 /test-results/
 /playwright-report/
 /playwright/.cache/
