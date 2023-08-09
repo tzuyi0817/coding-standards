@@ -13,12 +13,13 @@ const pinia = createPinia();
 setActivePinia(pinia);
 
 export function renderComponent(testComponent: Component, options?: RenderComponentOptions) {
-  const componentOptions = options ?? {};
+  const { provide, ...componentOptions } = options ?? {};
 
   return render(testComponent, {
     ...componentOptions,
     global: {
       plugins: [pinia, i18n],
+      provide,
     },
   });
 }
