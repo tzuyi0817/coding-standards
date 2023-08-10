@@ -20,7 +20,9 @@
 - Eslint
 - Prettier
 - [Husky](https://www.npmjs.com/package/husky) to improves commits
-  - if encounter npm: command not found, can execute `ln -s $(which npx) /usr/local/bin/npx` in zsh
+  - if encounter npx: command not found, can execute `ln -s $(which npx) /usr/local/bin/npx` in zsh
+  - [commitlint](https://commitlint.js.org/#/) checks if your commit messages meet the conventional commit format
+  - [lint-staged](https://github.com/okonet/lint-staged) filter files checked by pre commit lint
 - Alias `@` to `<project_root>/src`
 - Mock use [msw](https://mswjs.io/)
   - `npx msw init ./public`

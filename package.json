@@ -67,11 +67,6 @@
   "msw": {
     "workerDirectory": "public"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,js,vue}": [
       "pnpm lint"
@@ -80,7 +75,6 @@
   "optionalDependencies": {
     "@commitlint/cli": "^17.7.0",
     "@commitlint/config-conventional": "^17.7.0",
-    "commitizen": "^4.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3"
   }
