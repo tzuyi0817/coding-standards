@@ -20,7 +20,7 @@
 - Eslint
 - Prettier
 - [Husky](https://www.npmjs.com/package/husky) to improves commits
-  - if encounter npm: command not found, can execute `ln -s $(which npm) /usr/local/bin/npm` in zsh
+  - if encounter npm: command not found, can execute `ln -s $(which npx) /usr/local/bin/npx` in zsh
 - Alias `@` to `<project_root>/src`
 - Mock use [msw](https://mswjs.io/)
   - `npx msw init ./public`
@@ -38,7 +38,7 @@
   - release please action
   - Automated unit tests
   - Automated e2e tests
-<!-- - GitLab CI
+  <!-- - GitLab CI
   - Automated e2e tests
   - Automated component tests -->
 
