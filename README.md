@@ -4,7 +4,7 @@
 
 - Vue 3
 - Pnpm 8
-- Vite 4
+- Vite 5
 - [Pinia](https://pinia.vuejs.org/) store
   - [pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate)
 - Routing using [vue-router 4](https://router.vuejs.org/)
@@ -33,6 +33,7 @@
   - [@testing-library/vue](https://testing-library.com/docs/vue-testing-library/intro/)
   - [@testing-library/user-event](https://testing-library.com/docs/ecosystem-user-event/)
 - E2E test use [playwright](https://playwright.dev/)
+- [Rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer) visualize and analyze your Rollup bundle to see which modules are taking up space
 - Predefined and fully typed global variables:
   - `VITE_APP_VERSION` is read from `package.json` version at build time
   - `VITE_APP_BUILD_EPOCH` is populated as `new Date().getTime()` at build time

@@ -12,7 +12,7 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier',
-    'plugin:security/recommended',
+    'plugin:security/recommended-legacy',
   ],
   parserOptions: {
     ecmaVersion: 'latest',

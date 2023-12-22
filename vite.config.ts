@@ -5,6 +5,7 @@ import { dirname, resolve } from 'node:path';
 import Components from 'unplugin-vue-components/vite';
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import { visualizer } from 'rollup-plugin-visualizer';
 import { version as pkgVersion } from './package.json';
 
 process.env.VITE_APP_VERSION = pkgVersion;
@@ -27,7 +28,12 @@ export default defineConfig({
     createSvgIconsPlugin({
       iconDirs: [resolve(process.cwd(), 'src/assets/images/svgIcons')],
     }),
+    visualizer({ gzipSize: true }),
   ],
+  esbuild: {
+    pure: ['console.log'],
+    drop: ['debugger'],
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('src', import.meta.url)),
