@@ -1,0 +1,21 @@
+name: Release
+
+on:
+  workflow_run:
+    workflows: ['CI-Pipeline']
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  release:
+    environment: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Release
+        run: npx semantic-release
