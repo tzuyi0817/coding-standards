@@ -1,6 +1,6 @@
 {
   "name": "coding-standards",
-  "version": "0.0.0",
+  "version": "1.1.2",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -53,6 +53,7 @@
     "postcss-pxtorem": "^6.0.0",
     "prettier": "^3.0.0",
     "rollup-plugin-visualizer": "^5.11.0",
+    "semantic-release": "^22.0.12",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "unplugin-vue-components": "^0.26.0",
@@ -80,11 +81,6 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "husky": "^8.0.3",
-    "lint-staged": "^15.0.0",
-    "semantic-release": "^22.0.12"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tzuyi0817/coding-standards.git"
+    "lint-staged": "^15.0.0"
   }
 }

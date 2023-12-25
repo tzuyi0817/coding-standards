@@ -2,7 +2,7 @@ name: Release
 
 on:
   workflow_run:
-    workflows: ['CI-Pipeline']
+    workflows: [CI-Pipeline]
     branches: [main]
     types:
       - completed
@@ -16,6 +16,6 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
       - name: Release
         run: npx semantic-release
