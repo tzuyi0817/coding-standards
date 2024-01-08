@@ -10,6 +10,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-recommended',
+    'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier',
     'plugin:security/recommended-legacy',
