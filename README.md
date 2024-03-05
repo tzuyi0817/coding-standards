@@ -18,6 +18,14 @@
 - [Vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) generate svg sprite map
 - [Unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) auto importing for common components
 - Eslint
+  - [plugin:vue/vue3-recommended](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js)
+  - [eslint:recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js)
+  - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript/blob/main/index.js)
+  - [@vue/eslint-config-prettier](https://github.com/vuejs/eslint-config-prettier/blob/main/index.js)
+  - [plugin:sonarjs/recommended](https://github.dev/SonarSource/eslint-plugin-sonarjs)
+  - [plugin:security/recommended-legacy](https://github.com/eslint-community/eslint-plugin-security/blob/main/index.js)
+  - [plugin:testing-library/vue](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/lib/configs/vue.ts)
+  - [plugin:playwright/recommended](https://github.com/playwright-community/eslint-plugin-playwright/blob/main/src/index.ts)
 - Prettier
 - [Husky](https://www.npmjs.com/package/husky) to improves commits
   - if encounter npx: command not found, can execute `ln -s $(which npx) /usr/local/bin/npx` in zsh

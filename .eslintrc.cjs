@@ -13,6 +13,7 @@ module.exports = {
     'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier',
+    'plugin:sonarjs/recommended',
     'plugin:security/recommended-legacy',
   ],
   parserOptions: {

@@ -45,6 +45,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-playwright": "^1.0.0",
     "eslint-plugin-security": "^2.1.0",
+    "eslint-plugin-sonarjs": "^0.24.0",
     "eslint-plugin-testing-library": "^6.0.0",
     "eslint-plugin-vue": "^9.15.1",
     "jsdom": "^24.0.0",
