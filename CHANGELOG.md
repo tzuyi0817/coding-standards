@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/tzuyi0817/coding-standards/compare/v1.2.0...v1.3.0) (2024-03-05)
+
+
+### Features
+
+* add eslint sonarjs ([59b6c2f](https://github.com/tzuyi0817/coding-standards/commit/59b6c2f7639da4b11646bedfebf9d21095bbcce1))
+
 # [1.2.0](https://github.com/tzuyi0817/coding-standards/compare/v1.1.2...v1.2.0) (2024-01-08)
 
 
