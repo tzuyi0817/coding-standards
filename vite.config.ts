@@ -1,4 +1,4 @@
-import { defineConfig, type UserConfig } from 'vite';
+import { defineConfig, splitVendorChunkPlugin, type UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 import { dirname, resolve } from 'node:path';
@@ -29,6 +29,7 @@ export default defineConfig({
       iconDirs: [resolve(process.cwd(), 'src/assets/images/svgIcons')],
     }),
     visualizer({ gzipSize: true }),
+    splitVendorChunkPlugin(),
   ],
   esbuild: {
     pure: ['console.log'],
@@ -37,6 +38,13 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('src', import.meta.url)),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'chunks/[name]-[hash].js',
+      },
     },
   },
 }) as UserConfig;
