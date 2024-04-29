@@ -13,7 +13,7 @@
 - Tailwind CSS 3
 - Vue-i18n 9
 - PostCSS 8 w/ `postcss-nesting` plugin
-- [Cssnano](https://cssnano.co/) for minimizing production CSS
+- [Cssnano](https://cssnano.github.io/cssnano/) for minimizing production CSS
 - [Postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem) generates rem units from pixel units
 - [Vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) generate svg sprite map
 - [Unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) auto importing for common components
