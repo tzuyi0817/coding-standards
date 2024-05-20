@@ -5,7 +5,7 @@ import { setActivePinia, createPinia } from 'pinia';
 import i18n from '@/plugins/i18n';
 
 interface RenderComponentOptions extends RenderOptions {
-  provide?: Record<any, any>;
+  provide?: Record<PropertyKey, unknown>;
 }
 
 const pinia = createPinia();
