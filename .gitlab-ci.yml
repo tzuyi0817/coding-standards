@@ -1,0 +1,19 @@
+stages:
+  - setup
+  - install dependencies
+  - install playwright
+  - test
+
+include:
+  - local: '.gitlab/setup.yml'
+
+install_playwright_browsers:
+  stage: install playwright
+  script:
+    - npx playwright install --with-deps
+
+run_tests:
+  stage: test
+  script:
+    - pnpm test:unit
+    - pnpm test:ci-e2e
