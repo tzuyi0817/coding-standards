@@ -1,38 +1,22 @@
 stages:
-  - e2e test
-  - unit test
+  - test
+  # - deploy
 
 include:
   - local: '.gitlab/setup.yml'
 
-run_e2e_test:
-  stage: e2e test
+run_test:
+  stage: test
   image: mcr.microsoft.com/playwright:focal
   script:
     - npx playwright install --with-deps
-    - pnpm test:ci-e2e
-  only:
-    changes:
-      - 'src/**'
-      - 'pnpm-lock.yaml'
-      - 'package.json'
-    refs:
-      - main
-      - develop
-    merge_requests: true
-  when: manual
-
-run_unit_test:
-  stage: unit test
-  script:
     - pnpm test:unit
-  only:
-    changes:
-      - 'src/**'
-      - 'pnpm-lock.yaml'
-      - 'package.json'
-    refs:
-      - main
-      - develop
-    merge_requests: true
-  when: manual
+    - pnpm test:ci-e2e
+  rules:
+    - if: $CI_COMMIT_BRANCH
+      changes:
+        - 'src/**'
+        - 'pnpm-lock.yaml'
+        - 'package.json'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - when: manual
