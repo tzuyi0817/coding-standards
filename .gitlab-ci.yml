@@ -1,34 +1,24 @@
 variables:
   NODE_VERSION: '20'
-  PNPM_VERSION: '9'
-  CACHE_KEY: '${CI_PROJECT_PATH_SLUG}-${CI_COMMIT_REF_SLUG}'
-
-cache:
-  key: ${CACHE_KEY}
-  paths:
-    - .pnpm-store
-    - node_modules/
-  policy: push
 
 stages:
-  - setup
-  - install dependencies
-  - test
+  - e2e test
+  - unit test
 
 include:
   - local: '.gitlab/setup.yml'
 
-run_tests:
-  stage: test
-  image: node:${NODE_VERSION}-alpine
-  cache:
-    key: ${CACHE_KEY}
-    paths:
-      - .pnpm-store
-      - node_modules/
+run_e2e_test:
+  stage: e2e test
   script:
     - npx playwright install --with-deps
-    - pnpm test:unit
     - pnpm test:ci-e2e
+  only:
+    - branches
+
+run_unit_test:
+  stage: unit test
+  script:
+    - pnpm test:unit
   only:
     - branches
