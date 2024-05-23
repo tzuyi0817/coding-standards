@@ -12,11 +12,27 @@ run_e2e_test:
     - npx playwright install --with-deps
     - pnpm test:ci-e2e
   only:
-    - branches
+    changes:
+      - 'src/**'
+      - 'pnpm-lock.yaml'
+      - 'package.json'
+    refs:
+      - main
+      - develop
+    merge_requests: true
+  when: manual
 
 run_unit_test:
   stage: unit test
   script:
     - pnpm test:unit
   only:
-    - branches
+    changes:
+      - 'src/**'
+      - 'pnpm-lock.yaml'
+      - 'package.json'
+    refs:
+      - main
+      - develop
+    merge_requests: true
+  when: manual
