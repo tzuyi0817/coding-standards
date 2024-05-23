@@ -1,13 +1,14 @@
 variables:
   NODE_VERSION: '20'
   PNPM_VERSION: '9'
-  CACHE_KEY: '${CI_RUNNER_TAGS}-${CI_COMMIT_REF_SLUG}-${CI_PROJECT_NAME}-${CI_COMMIT_SHA}'
+  CACHE_KEY: '${CI_PROJECT_PATH_SLUG}-${CI_COMMIT_REF_SLUG}'
 
 cache:
   key: ${CACHE_KEY}
   paths:
     - .pnpm-store
     - node_modules/
+  policy: push
 
 setup_environment:
   stage: setup
@@ -18,15 +19,20 @@ setup_environment:
     - corepack prepare pnpm@${PNPM_VERSION} --activate
     - mkdir -p .pnpm-store
     - pnpm config set store-dir .pnpm-store
+    - pnpm config get store-dir
+  only:
+    - branches
 
 install:
   stage: install dependencies
   image: node:${NODE_VERSION}-alpine
   cache:
+    key: ${CACHE_KEY}
     paths:
       - .pnpm-store
       - node_modules/
   script:
     - pnpm install
+    - du -sh .pnpm-store
   only:
     - branches

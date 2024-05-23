@@ -1,19 +1,34 @@
+variables:
+  NODE_VERSION: '20'
+  PNPM_VERSION: '9'
+  CACHE_KEY: '${CI_PROJECT_PATH_SLUG}-${CI_COMMIT_REF_SLUG}'
+
+cache:
+  key: ${CACHE_KEY}
+  paths:
+    - .pnpm-store
+    - node_modules/
+  policy: push
+
 stages:
   - setup
   - install dependencies
-  - install playwright
   - test
 
 include:
   - local: '.gitlab/setup.yml'
 
-install_playwright_browsers:
-  stage: install playwright
-  script:
-    - npx playwright install --with-deps
-
 run_tests:
   stage: test
+  image: node:${NODE_VERSION}-alpine
+  cache:
+    key: ${CACHE_KEY}
+    paths:
+      - .pnpm-store
+      - node_modules/
   script:
+    - npx playwright install --with-deps
     - pnpm test:unit
     - pnpm test:ci-e2e
+  only:
+    - branches
