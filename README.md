@@ -45,13 +45,12 @@
 - Predefined and fully typed global variables:
   - `VITE_APP_VERSION` is read from `package.json` version at build time
   - `VITE_APP_BUILD_EPOCH` is populated as `new Date().getTime()` at build time
-- GitHub workflows
+- Github workflows
   - ci - on workflow call and dispatch
   - deploy - on push main branch
   - preview - on pull request
-  <!-- - GitLab CI
-  - Automated e2e tests
-  - Automated component tests -->
+- Gitlab CI
+  - run tests - on branches, merge request and manual
 
 ## Project Files
 
