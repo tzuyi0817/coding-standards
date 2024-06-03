@@ -4,7 +4,7 @@ import type { RenderOptions } from '@testing-library/vue/types';
 import { setActivePinia, createPinia } from 'pinia';
 import i18n from '@/plugins/i18n';
 
-interface RenderComponentOptions extends RenderOptions {
+interface RenderComponentOptions extends RenderOptions<unknown> {
   provide?: Record<PropertyKey, unknown>;
 }
 
