@@ -18,14 +18,7 @@
 - [Vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) generate svg sprite map
 - [Unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) auto importing for common components
 - Eslint
-  - [eslint-plugin-vue/flat/vue3-recommended](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/flat/vue3-recommended.js)
-  - [eslint-recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js)
-  - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript/blob/main/index.js)
-  - [@vue/eslint-config-prettier](https://github.com/vuejs/eslint-config-prettier/blob/main/index.js)
-  - [eslint-plugin-sonarjs/recommended](https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/src/index.ts)
-  - [eslint-plugin-security/recommended](https://github.com/eslint-community/eslint-plugin-security/blob/main/index.js)
-  - [eslint-plugin-testing-library/vue](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/lib/configs/vue.ts)
-  - [eslint-plugin-playwright/flat/recommended](https://github.com/playwright-community/eslint-plugin-playwright/blob/main/src/index.ts)
+  - [@component-hook/eslint-plugin](https://www.npmjs.com/package/@component-hook/eslint-plugin?activeTab=readme)
 - Prettier
 - [Husky](https://www.npmjs.com/package/husky) to improves commits
   - if encounter npx: command not found, can execute `ln -s $(which npx) /usr/local/bin/npx` in zsh
