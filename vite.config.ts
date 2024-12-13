@@ -1,12 +1,12 @@
 import { fileURLToPath, URL } from 'node:url';
 import { dirname, resolve } from 'node:path';
-import { defineConfig, splitVendorChunkPlugin, type UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
 import vueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { visualizer } from 'rollup-plugin-visualizer';
-import packageJson from './package.json'  with { type: 'json' };
+import packageJson from './package.json' with { type: 'json' };
 
 process.env.VITE_APP_VERSION = packageJson.version;
 process.env.NODE_ENV = process.env.MOCK ? 'mockServiceWorker' : process.env.NODE_ENV;
@@ -29,7 +29,6 @@ export default defineConfig({
       iconDirs: [resolve(process.cwd(), 'src/assets/images/svgIcons')],
     }),
     visualizer({ gzipSize: true }),
-    splitVendorChunkPlugin(),
   ],
   esbuild: {
     pure: ['console.log'],
@@ -47,4 +46,4 @@ export default defineConfig({
       },
     },
   },
-}) as UserConfig;
+});

@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
 import { fileURLToPath, URL } from 'node:url';
-import { mergeConfig, defineConfig, type UserConfig } from 'vitest/config';
+import { mergeConfig, defineConfig } from 'vitest/config';
 import viteConfig from './vite.config';
 
 export default mergeConfig(
@@ -17,5 +17,5 @@ export default mergeConfig(
         include: ['!src/main.ts', 'src/**/*.ts', 'src/**/*.vue'],
       },
     },
-  }) as UserConfig,
+  }),
 );
