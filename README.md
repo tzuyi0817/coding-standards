@@ -58,14 +58,14 @@ src/
 ├── apis/*
 ├── assets/*
 │   └── images/
-│       └── svgIcons
+│       └── svg-icons
 │          └── vue.svg
 ├── components/
-│   ├── common/
-│   │   └── SvgIcon.vue
-│   └── indexPage/
-│       └── HelloWorld.vue
-├── configs/*
+│   └── svg-icon/
+│       ├── src
+│       │   └── index.vue
+│       └── index.ts
+├── constants/*
 ├── hooks/*
 ├── locales/
 │   ├── en-US.json
@@ -77,7 +77,10 @@ src/
 │   │── browser.ts
 │   └── server.ts
 ├── pages/
-│   └── IndexPage.vue
+│   └── home/
+│       ├── components
+│       │   └── HelloWorld.vue
+│       └── index.vue
 ├── plugins/
 │   └── i18n.ts
 ├── router/
@@ -88,10 +91,11 @@ src/
 │   └── index.ts
 ├── styles/
 │   ├── common/
-|   │   ├── all.postcss
-|   │   └── button.postcss
-│   ├── index.postcss
-│   └── tailwind.postcss
+|   │   ├── all.css
+|   │   └── button.css
+│   ├── base.css
+│   ├── index.css
+│   └── tailwindcss.css
 ├── types/*
 ├── utils/*
 ├── App.vue
