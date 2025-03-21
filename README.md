@@ -2,17 +2,17 @@
 
 ## Features
 
-- Vue 3
-- Pnpm 9
-- Vite 5
+- Vue
+- Pnpm
+- Vite
 - [Pinia](https://pinia.vuejs.org/) store
   - [pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate)
-- Routing using [vue-router 4](https://router.vuejs.org/)
-- TypeScript 5
+- Routing using [vue-router](https://router.vuejs.org/)
+- TypeScript
 - Axios
-- Tailwind CSS 3
-- Vue-i18n 9
-- PostCSS 8 w/ `postcss-nesting` plugin
+- Tailwind CSS
+- Vue-i18n
+- PostCSS w/ `postcss-nesting` plugin
 - [Cssnano](https://cssnano.github.io/cssnano/) for minimizing production CSS
 - [Postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem) generates rem units from pixel units
 - [Vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) generate svg sprite map

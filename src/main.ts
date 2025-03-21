@@ -3,13 +3,12 @@ import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import 'virtual:svg-icons-register';
 
-import '@/styles/tailwind.postcss';
-import '@/styles/index.postcss';
+import '@/styles/index.css';
 import App from './App.vue';
 import router from '@/router';
 import i18NPlugin from '@/plugins/i18n';
 
-if (process.env.NODE_ENV === 'mockServiceWorker') {
+if (import.meta.env.VITE_APP_MOCK === 'service-worker') {
   const { worker } = await import('@/mocks/browser');
 
   worker.start();
