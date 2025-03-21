@@ -1,14 +1,13 @@
+import postcssPxtorem from 'postcss-pxtorem';
+import cssnano from 'cssnano';
+
 export default {
-  plugins: {
-    'postcss-import': {},
-    'tailwindcss/nesting': {},
-    'postcss-nesting': {},
-    tailwindcss: {},
-    autoprefixer: {},
-    'postcss-pxtorem': {
+  plugins: [
+    postcssPxtorem({
       rootValue: 16,
       propList: ['*'],
-    },
-    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
-  },
+      selectorBlackList: ['norem'],
+    }),
+    ...(process.env.NODE_ENV === 'production' ? [cssnano({ preset: 'default' })] : []),
+  ],
 };
