@@ -20,6 +20,5 @@
   "terminal.integrated.shellIntegration.enabled": true,
   "files.associations": {},
   "typescript.tsdk": "node_modules/typescript/lib",
-  "tailwindCSS.experimental.configFile": "src/styles/tailwindcss.css",
   "cSpell.words": ["dotenv", "pinia", "persistedstate", "unplugin", "Sonarjs", "typecheck", "pxtorem", "norem"]
 }
