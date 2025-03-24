@@ -1,10 +1,10 @@
 # Vue3 Coding Standards
 
+This project is built with `vue3` + `vite`, using `pnpm` for package management and [pinia](https://pinia.vuejs.org/) for state management.
+
 ## Features
 
-This project is built with `vue3` + `vite`, using `pnpm` for package management and [pinia](<(https://pinia.vuejs.org/)>) for state management.
-
-- **Development Experience**: Written in `typeScript`, styled with [tailwind CSS](https://tailwindcss.com/), and structured with [vue-router](https://router.vuejs.org/), and [vue-i18n](https://vue-i18n.intlify.dev/). Supports SVGs ([vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons)).
+- **Development Experience**: Written in `typeScript`, styled with [tailwindcss](https://tailwindcss.com/), and structured with [vue-router](https://router.vuejs.org/), and [vue-i18n](https://vue-i18n.intlify.dev/). Supports SVGs ([vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons)).
 - **API & Mocking**: Handles requests with [axios](https://axios-http.com/docs/intro) and mocks APIs using [msw](<(https://mswjs.io/)>).
 - **Code Quality**: Enforces standards with `ESLint` and `prettier`, with [husky](https://www.npmjs.com/package/husky), [commitlint](https://commitlint.js.org/#/), and [lint-staged](https://github.com/okonet/lint-staged) for commit validation.
 - **Testing**: Uses [vitest](https://vitest.dev/) + [testing-library](https://testing-library.com/) for unit testing and [playwright](https://playwright.dev/) for E2E testing.
@@ -72,7 +72,7 @@ src/
 |   │   └── button.css
 │   ├── base.css
 │   ├── index.css
-│   └── tailwindcss.css
+│   └── tailwind.css
 ├── types/*
 ├── utils/*
 ├── App.vue
