@@ -1,8 +1,7 @@
 import { createApp } from 'vue';
-import { createPinia } from 'pinia';
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import 'virtual:svg-icons-register';
 
+import { createPinia } from './stores';
 import '@/styles/index.css';
 import App from './App.vue';
 import router from '@/router';
@@ -14,10 +13,9 @@ if (import.meta.env.VITE_APP_MOCK === 'service-worker') {
   worker.start();
 }
 
-const pinia = createPinia();
 const app = createApp(App);
+const pinia = createPinia();
 
-pinia.use(piniaPluginPersistedstate);
 app.use(pinia);
 app.use(router);
 app.use(i18NPlugin);
