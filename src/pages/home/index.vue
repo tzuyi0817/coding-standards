@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
-import { SvgIcon } from '@/components/svg-icon';
+import { SvgIcon } from '@/components/common';
 </script>
 
 <template>

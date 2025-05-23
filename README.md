@@ -28,18 +28,17 @@ This project is built with [vue3](https://vuejs.org/) + [vite](https://vite.dev/
 src/
 ├── __tests__/
 │   ├── __mocks__/
-│   ├── setup/
-│   │   └── unitTest.ts
 │   ├── e2e/*
 │   └── unit/*
 ├── assets/*
-│   └── images/
-│       └── svg-icons
+│   └── svg-icons
 │          └── vue.svg
 ├── components/
-│   └── svg-icon/
-│       ├── src
-│       │   └── index.vue
+│   └── common
+│       ├── svg-icon/
+│       │   ├── src
+│       │   │   └── index.vue
+│       │   └── index.ts
 │       └── index.ts
 ├── constants/*
 ├── hooks/*
