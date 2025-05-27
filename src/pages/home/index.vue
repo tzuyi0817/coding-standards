@@ -18,6 +18,7 @@ import { SvgIcon } from '@/components/common';
     <a
       href="https://vuejs.org/"
       target="_blank"
+      aria-label="Vue link"
     >
       <svg-icon
         name="vue"

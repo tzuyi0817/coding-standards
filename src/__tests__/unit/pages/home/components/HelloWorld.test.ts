@@ -5,7 +5,7 @@ import { renderComponent } from '@/__tests__/unit/render';
 import { useConfigStore } from '@/stores';
 import i18n from '@/plugins/i18n';
 
-describe('HelloWorld component', () => {
+describe('home page HelloWorld component', () => {
   const { t } = i18n.global;
 
   it('renders the correct content', () => {
