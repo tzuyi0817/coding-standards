@@ -1,11 +1,11 @@
 import { createApp } from 'vue';
-import 'virtual:svg-icons-register';
-
-import { createPinia } from './stores';
-import '@/styles/index.css';
-import App from './App.vue';
-import router from '@/router';
 import i18NPlugin from '@/plugins/i18n';
+
+import router from '@/router';
+import App from './App.vue';
+import { createPinia } from './stores';
+import 'virtual:svg-icons-register';
+import '@/styles/index.css';
 
 if (import.meta.env.VITE_APP_MOCK === 'service-worker') {
   const { worker } = await import('@/mocks/browser');
