@@ -46,6 +46,10 @@ export default defineConfig({
         chunkFileNames: 'chunks/[name]-[hash].js',
         assetFileNames: 'assets/[name].[hash].[ext]',
         entryFileNames: 'entries/[name].[hash].js',
+        manualChunks: {
+          core: ['vue', 'vue-router', 'pinia', 'pinia-plugin-persistedstate', 'vue-i18n'],
+          vender: ['axios', '@intlify/unplugin-vue-i18n/messages'],
+        },
       },
     },
   },
