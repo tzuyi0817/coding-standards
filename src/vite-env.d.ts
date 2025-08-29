@@ -8,6 +8,7 @@ declare module '*.vue' {
 
 interface ImportMetaEnv extends Readonly<Record<string, string>> {
   readonly VITE_APP_VERSION: string;
-  readonly VITE_APP_BUILD_EPOCH?: string;
+  readonly VITE_APP_LAST_COMMIT_HASH: string;
+  readonly VITE_APP_BUILD_EPOCH: string;
   readonly VITE_APP_MOCK?: 'service-worker';
 }

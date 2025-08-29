@@ -10,7 +10,7 @@ describe('home page HelloWorld component', () => {
 
   it('renders the correct content', () => {
     const msg = 'Hello World!';
-    const { version } = useConfigStore();
+    const { appMeta } = useConfigStore();
 
     renderComponent(HelloWorld, { props: { msg } });
     expect(screen.getByRole('heading', { name: msg })).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe('home page HelloWorld component', () => {
     expect(screen.getByText(/install in your ide for a better dx/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /volar/i })).toBeInTheDocument();
     expect(screen.getByText(/click on the vite and vue logos to learn more/i)).toBeInTheDocument();
-    expect(screen.getByText(version)).toBeInTheDocument();
+    expect(screen.getByText(appMeta.version)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: t('language') })).toBeInTheDocument();
   });
 
