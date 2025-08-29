@@ -20,7 +20,7 @@ describe('home page HelloWorld component', () => {
     expect(screen.getByText(/install in your ide for a better dx/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /volar/i })).toBeInTheDocument();
     expect(screen.getByText(/click on the vite and vue logos to learn more/i)).toBeInTheDocument();
-    expect(screen.getByText(appMeta.version)).toBeInTheDocument();
+    expect(screen.getByText(`${appMeta.version} - Built at: ${appMeta.builtAt.toLocaleString()}`)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: t('language') })).toBeInTheDocument();
   });
 
