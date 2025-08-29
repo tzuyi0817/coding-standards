@@ -8,4 +8,5 @@ export default {
   proseWrap: 'preserve',
   arrowParens: 'avoid',
   singleAttributePerLine: true,
+  plugins: ['prettier-plugin-tailwindcss'],
 };
