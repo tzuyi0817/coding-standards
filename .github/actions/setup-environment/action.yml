@@ -14,32 +14,8 @@ runs:
       uses: actions/setup-node@v5
       with:
         node-version: 22.18.0
-
-    - name: get pnpm store directory
-      id: pnpm-cache
-      shell: bash
-      run: |
-        echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-    - name: setup pnpm cache
-      uses: actions/cache@v4
-      with:
-        path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-pnpm-store-
-
-    - name: setup node_modules cache
-      id: dependencies-cache
-      uses: actions/cache@v4
-      with:
-        path: |
-          **/node_modules
-        key: ${{ runner.os }}-node-modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-node-modules-
+        cache: 'pnpm'
 
     - name: install dependencies
-      if: steps.dependencies-cache.outputs.cache-hit != 'true'
       shell: bash
       run: pnpm install
