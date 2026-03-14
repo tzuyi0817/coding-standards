@@ -63,6 +63,9 @@ importers:
       '@vue/tsconfig':
         specifier: ^0.8.1
         version: 0.8.1(typescript@5.9.3)(vue@3.5.28(typescript@5.9.3))
+      cross-env:
+        specifier: ^10.1.0
+        version: 10.1.0
       cssnano:
         specifier: ^7.1.2
         version: 7.1.2(postcss@8.5.6)
@@ -612,6 +615,9 @@ packages:
     engines: {node: '>=20.19.0'}
     peerDependencies:
       postcss: ^8.4
+
+  '@epic-web/invariant@1.0.0':
+    resolution: {integrity: sha512-lrTPqgvfFQtR/eY/qkIzp98OGdNJu0m5ji3q/nJI8v3SXkRKEnWiOxMmbvcSoAIzv/cGiuvRy57k4suKQSAdwA==}
 
   '@es-joy/jsdoccomment@0.84.0':
     resolution: {integrity: sha512-0xew1CxOam0gV5OMjh2KjFQZsKL2bByX1+q4j3E73MpYIdyUxcZb/xQct9ccUb+ve5KGUYbCUxyPnYB7RbuP+w==}
@@ -2120,6 +2126,11 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  cross-env@10.1.0:
+    resolution: {integrity: sha512-GsYosgnACZTADcmEyJctkJIoqAhHjttw7RsFrVoJNXbsWWqaq6Ym+7kZjq6mS45O0jij6vtiReppKQEtqWy6Dw==}
+    engines: {node: '>=20'}
+    hasBin: true
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -6044,6 +6055,8 @@ snapshots:
     dependencies:
       postcss: 8.5.6
 
+  '@epic-web/invariant@1.0.0': {}
+
   '@es-joy/jsdoccomment@0.84.0':
     dependencies:
       '@types/estree': 1.0.8
@@ -7437,6 +7450,11 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
     optional: true
+
+  cross-env@10.1.0:
+    dependencies:
+      '@epic-web/invariant': 1.0.0
+      cross-spawn: 7.0.6
 
   cross-spawn@7.0.6:
     dependencies:
