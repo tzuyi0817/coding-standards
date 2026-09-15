@@ -51,7 +51,7 @@
     "cssnano": "^7.1.4",
     "eslint": "^9.39.4",
     "fast-glob": "^3.3.3",
-    "jsdom": "^29.0.2",
+    "jsdom": "^30.0.1",
     "msw": "^2.13.2",
     "postcss": "^8.5.9",
     "postcss-preset-env": "^11.2.0",
