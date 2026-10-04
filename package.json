@@ -2,7 +2,7 @@
   "name": "coding-standards",
   "type": "module",
   "version": "1.3.0",
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "pnpm@12.9.1",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
