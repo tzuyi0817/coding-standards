@@ -1,18 +1,21 @@
 import userEvent from '@testing-library/user-event';
 import { screen } from '@testing-library/vue';
-import { renderComponent } from '@/__tests__/unit/render';
 import HelloWorld from '@/pages/home/components/HelloWorld.vue';
 import i18n from '@/plugins/i18n';
 import { useConfigStore } from '@/stores';
+import { renderComponent } from '@/test-utils';
 
 describe('home page HelloWorld component', () => {
   const { t } = i18n.global;
 
   it('renders the correct content', () => {
     const msg = 'Hello World!';
-    const { appMeta } = useConfigStore();
 
     renderComponent(HelloWorld, { props: { msg } });
+
+    const { appMeta } = useConfigStore();
+    const builtAtText = `${appMeta.version} - Built at: ${appMeta.builtAt.toLocaleString()}`.replaceAll(/\s+/g, ' ');
+
     expect(screen.getByRole('heading', { name: msg })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /count is 0/i })).toBeInTheDocument();
     expect(screen.getByText(/check out , the official vue \+ vite starter/i)).toBeInTheDocument();
@@ -20,7 +23,7 @@ describe('home page HelloWorld component', () => {
     expect(screen.getByText(/install in your ide for a better dx/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /volar/i })).toBeInTheDocument();
     expect(screen.getByText(/click on the vite and vue logos to learn more/i)).toBeInTheDocument();
-    expect(screen.getByText(`${appMeta.version} - Built at: ${appMeta.builtAt.toLocaleString()}`)).toBeInTheDocument();
+    expect(screen.getByText(builtAtText)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: t('language') })).toBeInTheDocument();
   });
 

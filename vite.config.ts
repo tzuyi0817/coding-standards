@@ -3,10 +3,10 @@ import { fileURLToPath, URL } from 'node:url';
 import vueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue';
+import { msw } from 'msw/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
-import { msw } from 'msw/vite'
 import './scripts/build-info';
 
 export default defineConfig({

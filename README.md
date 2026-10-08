@@ -26,11 +26,8 @@ This project is built with [vue3](https://vuejs.org/) + [vite](https://vite.dev/
 ### Project Files
 
 ```text
+e2e/*
 src/
-├── __tests__/
-│   ├── __mocks__/
-│   ├── e2e/*
-│   └── unit/*
 ├── assets/*
 │   └── svg-icons
 │          └── vue.svg
@@ -55,7 +52,9 @@ src/
 ├── pages/
 │   └── home/
 │       ├── components
+│       │   ├── HelloWorld.test.ts
 │       │   └── HelloWorld.vue
+│       ├── index.test.ts
 │       └── index.vue
 ├── plugins/
 │   └── i18n.ts
@@ -72,6 +71,8 @@ src/
 │   ├── base.css
 │   ├── index.css
 │   └── tailwind.css
+├── test-utils/
+│   └── index.ts
 ├── types/*
 ├── utils/*
 ├── App.vue
