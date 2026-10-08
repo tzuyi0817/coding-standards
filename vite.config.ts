@@ -7,7 +7,7 @@ import { msw } from 'msw/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
-import './scripts/build-info';
+import './scripts/build-info/index.ts';
 
 export default defineConfig({
   base: './',
@@ -23,24 +23,31 @@ export default defineConfig({
     msw(),
     visualizer({ gzipSize: true }),
   ],
-  esbuild: {
-    pure: ['console.log'],
-    drop: ['debugger'],
-  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('src', import.meta.url)),
     },
   },
   build: {
-    rollupOptions: {
+    rolldownOptions: {
+      treeshake: {
+        manualPureFunctions: ['console.log'],
+      },
       output: {
         chunkFileNames: 'chunks/[name]-[hash].js',
         assetFileNames: 'assets/[name].[hash].[ext]',
         entryFileNames: 'entries/[name].[hash].js',
-        manualChunks: {
-          core: ['vue', 'vue-router', 'pinia', 'pinia-plugin-persistedstate', 'vue-i18n'],
-          vender: ['axios', '@intlify/unplugin-vue-i18n/messages'],
+        codeSplitting: {
+          groups: [
+            {
+              name: 'core',
+              test: /node_modules[\\/](?:vue|vue-router|pinia|pinia-plugin-persistedstate|vue-i18n)[\\/]/,
+            },
+            {
+              name: 'vendor',
+              test: /node_modules[\\/]axios[\\/]|unplugin-vue-i18n[\\/]messages/,
+            },
+          ],
         },
       },
     },
