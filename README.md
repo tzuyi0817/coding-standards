@@ -11,7 +11,7 @@ This project is built with [vue3](https://vuejs.org/) + [vite](https://vite.dev/
 - **Optimization**: Compresses CSS with [cssnano](https://cssnano.github.io/cssnano/), converts units with [postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem), convert modern CSS into something most browsers can understand with [postcss-preset-env](https://www.npmjs.com/package/postcss-preset-env), and analyzes assets with [rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer).
 - **CI/CD**: Integrates `GitHub Actions` and `GitLab CI` for automated testing and deployment.
 
-### Code Features / Opinions
+## Code Features / Opinions
 
 - Project root aliased as `@` to `<project_root>/src`
 - Store persistedstate use [pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate)
@@ -23,7 +23,7 @@ This project is built with [vue3](https://vuejs.org/) + [vite](https://vite.dev/
   - `VITE_APP_BUILD_EPOCH` is populated as `Date.now()` at build time
   - `VITE_APP_MOCK` is use mock environment
 
-### Project Files
+## Project Files
 
 ```text
 e2e/*
